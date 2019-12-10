@@ -1,0 +1,97 @@
+@charset "ISO-8859-1";
+body{
+	background-color: #bdc3c7;
+	margin: 10px;
+}
+thead th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+     
+    z-index: 0;
+    background-color:#138496; 
+}
+
+// .table  thead th { position: sticky; top: 0; }
+
+
+
+#rosso{
+background-color:#CF103F; 
+  
+}
+#datepicker {
+    width: 20%; */
+  
+}
+
+#rigatot{
+
+ text-align:left;
+}
+
+
+#rigaodp{
+line-height:15px; 
+  
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+
+#myInput{
+width:20%; 
+  
+}
+
+#myTable {
+	 
+	font-size: 20px;
+	 
+}  
+
+#myTable1 {
+	 
+	font-size: 20px;
+	 
+}   
+ 
+#table2 {
+	/* line-height:0.2; */
+	font-size: 20px;
+	width:100%;
+	  /* margin-top: 10px;
+	  margin-right: 10px;
+	  margin-bottom: 10px;
+	  margin-left: 10px; */
+}  
+ 
+#div1{
+	margin: 1px;
+	width:100%;
+	
+	
+}
+#div2{
+	/* margin-top: 20px; */
+	padding-top:20px;
+	margin: 1px;
+	/* width:100%; */
+} 
+
+
+
+
+
+.checkall {
+   
+  padding-left: 10px;
+}
+
+.inner
+{
+    display: inline-block;
+}

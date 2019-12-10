@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %} - Riepilogo Produzione Peso -</title>
+  
+ <header>
+ 
+ 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 	
+ 
+ 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='peso.css') }}">
+ 
+  </header>
+ 
+   <body>
+  <form action="/peso" id="myForm" method="POST">
+  
+ 	 <div>
+    	<a href="/peso" class="btn btn-info" role="button">Home</a>
+    	<label>
+    	Data inizio
+    	</label>
+    	<input name="datein" value="{{datain}}" type="text" id="datepicker" > </input> 
+    	<label>
+    	Data fine
+    	</label>
+	    <input name="datefi" value="{{datafi}}" type="text" id="datepicker"> </input> 
+    	<button  name="export" value="Ok" type="submit"class="btn btn-danger">Ok</button>
+     </div>
+  	 
+    <div>
+    
+   <div id="div2">
+ 	<table id ="table2" class="table table-striped  ">  
+	 <thead id="thead">
+	    <tr>
+	     <!-- intestazione  -->
+	     
+	     		 {%for i in range(0, lent) %} 
+	     		 
+			      <th class="col-xs-3" scope="col">{{rowst[i]  }}</th>
+			     
+			     {%endfor%} 
+	    </tr>
+	  </thead>
+  	<tbody id="myTable">
+		 <!-- For loop  -->
+		{%for i in range(0, len) %} 
+		<!-- table rows -->
+		 	<tr id="riga" class="rigatr">
+		  	{%for r in range(0, lenr) %} 
+			 	 
+		  		
+			        <td class="col-xs-3" id="rigatot">{{rows[i][r] }}</td> 
+			        
+		  {%endfor%} 
+			 </tr>  
+		{%endfor%} 
+ 	 </tbody>
+</table> 
+
+
+
+ 
+
+</div>
+<div id="divtot">
+ <table id="myTable1" class="table table-striped"> 
+	 <thead>
+	    <tr>
+	     <!-- intestazione  -->
+  		   	<th id="tht" scope="col" >Totali</th>
+  		   	<th id="th1" scope="col">Qta_Grammatura: {{rows1[0][0] }}</th>
+	      	<th id="th2" scope="col">Peso_KG:  {{rows1[0][1] }}</th> 
+      		 
+	     </tr>
+	  </thead>
+	   
+  </table>
+ </div>
+
+ </form>
+ 
+<script type="text/javascript">
+
+  
+ 
+</script>
+  
+  </body>
+ 
